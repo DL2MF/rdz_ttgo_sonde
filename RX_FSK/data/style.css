@@ -1,0 +1,103 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: #ddd
+}
+
+
+td#sfreq {
+	background-color: #ccc;
+}
+
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+
+.tab button:hover {
+	background-color: #ddd;
+}
+
+.tab button.active {
+	background-color: #ccc;
+}
+
+.data {
+  table-layout: fixed;
+  width: 99%;
+  white-space: nowrap;
+}
+.data td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowID {
+  width: 5%;
+}
+.rowAct {
+  width: 10%;
+}
+.rowFreq {
+  width: 10%;
+}
+.rowSite {
+  width: 50%;
+}
+.rowType {
+  width: 15%;
+}
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	height: 100%;
+}
+
+html {
+  font-family: Helvetica;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+}
+h1{
+  color: #0F3376;
+  padding: 2vh;
+}
+p{
+  font-size: 1.5rem;
+}
+.button {
+  display: inline-block;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 16px 40px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #f44336;
+}

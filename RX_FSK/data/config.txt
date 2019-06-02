@@ -1,0 +1,75 @@
+#-------------------------------#
+# Hardware depending settings
+#-------------------------------#
+# pin: 255=disabled; x=button x+128=touch button
+button_pin=130
+button2_pin=142
+# LED port
+led_pout=9
+# OLED Setup is depending on hardware of LoRa board
+# TTGO v1:  SDA=4  SCL=15, RST=16 
+# TTGO v2:  SDA=21 SCL=22, RST=16
+# No specification in config file: try autodetection (gpio4 pin level at startup)
+#oled_sda=21
+#oled_scl=22
+oled_rst=16
+#-------------------------------#
+# General config settings
+#-------------------------------#
+maxsonde=20
+debug=0
+# wifi mode: 1=client in background; 2=AP in background; 3=client on startup, ap if failure
+wifi=3
+# display mode: 1=standard 2=fieldmode 3=field w/sondetype
+display=3
+#-------------------------------#
+# Spectrum display settings
+#-------------------------------#
+startfreq=400
+channelbw=10
+spectrum=10
+timer=1
+noisefloor=-125
+marker=1
+#-------------------------------#
+# APRS settings
+#-------------------------------#
+call=N0CALL
+passcode=12345
+#-------------------------------#
+# Sonde specific settings: bandwidth
+# valid values: 3100, 3900, 5200, 6300, 7800, 10400, 12500,
+# 15600, 20800, 25000, ...
+# other values will be rounded up to the next valid value
+# rs92.alt2d: default altitude used by RS92 decoder if only 3 sats available
+#-------------------------------#
+rs41.agcbw=12500
+rs41.rxbw=6300
+rs92.rxbw=12500
+rs92.alt2d=480
+dfm.agcbw=20800
+dfm.rxbw=10400
+#-------------------------------#
+# axudp for sending to aprsmap
+#-------------------------------#
+# local use only, do not feed to public services
+# data not sanitized / quality checked, outliers not filtered out
+axudp.active=1
+axudp.host=192.168.42.20
+axudp.port=9002
+axudp.symbol=/O
+axudp.highrate=1
+axudp.idformat=0
+#-------------------------------#
+# maybe some time in the future
+#-------------------------------#
+# currently simply not implemented, no need to put anything here anyway
+tcp.active=0
+tcp.host=radiosondy.info
+tcp.port=14590
+tcp.symbol=/O
+tcp.highrate=20
+tcp.idformat=0
+#-------------------------------#
+# EOF
+#-------------------------------#
